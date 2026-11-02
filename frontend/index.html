@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Discover thoughtful gifts for every occasion with intelligent, occasion-aware recommendations."
+  >
+  <title>Occasio — Gifts That Mean More</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="#" aria-label="Occasio home">
+        <span class="brand-mark">o.</span>
+        <span>occasio</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#occasions">Occasions</a>
+        <a href="#recommendations">Discover gifts</a>
+        <a href="#about">Our approach</a>
+      </nav>
+
+      <a href="#recommendations" class="nav-cta">Find a gift <span>↗</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          THOUGHTFUL GIFTING, REIMAGINED
+        </div>
+
+        <h1>Make every<br>moment <em>matter.</em></h1>
+
+        <p class="hero-copy">
+          The right gift says what words sometimes can't.
+          Discover something meaningful for every person and occasion.
+        </p>
+
+        <form id="search-form" class="search-panel">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input
+            id="search-input"
+            type="search"
+            placeholder="Try “a thoughtful birthday gift…”"
+            aria-label="Describe the gift you are looking for"
+            required
+          >
+          <button type="submit" id="search-button">Discover <span>→</span></button>
+        </form>
+
+        <p class="search-hint">Try a person, an occasion, or a feeling.</p>
+
+        <div class="hero-proof">
+          <div class="proof-avatars" aria-hidden="true">
+            <span>G</span><span>♡</span><span>✳</span>
+          </div>
+          <p><strong>Thoughtfully matched.</strong> Powered by AI recommendations.</p>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-label="A curated gift arrangement">
+        <div class="art-orbit orbit-one"></div>
+        <div class="art-orbit orbit-two"></div>
+        <div class="art-sun"></div>
+
+        <div class="art-note note-top">
+          <span>✳</span> Little things, big feelings
+        </div>
+
+        <div class="gift-scene">
+          <div class="gift-flower flower-a">✿</div>
+          <div class="gift-flower flower-b">✿</div>
+          <div class="gift-box">
+            <div class="gift-lid"></div>
+            <div class="gift-ribbon ribbon-vertical"></div>
+            <div class="gift-ribbon ribbon-horizontal"></div>
+            <div class="gift-bow">∞</div>
+          </div>
+          <div class="gift-shadow"></div>
+        </div>
+
+        <div class="art-note note-bottom">
+          <span>♡</span> Picked just for them
+        </div>
+      </div>
+    </section>
+
+    <section id="occasions" class="occasion-section section-wrap">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">START WITH A MOMENT</p>
+          <h2>What's the occasion?</h2>
+        </div>
+        <p class="section-description">
+          A little inspiration for whatever you're celebrating.
+        </p>
+      </div>
+
+      <div class="occasion-grid">
+        <button class="occasion-card" data-query="Birthday gift for someone special">
+          <span class="occasion-symbol birthday">✳</span>
+          <span class="occasion-name">Birthday</span>
+          <span class="occasion-subtitle">Make their day</span>
+        </button>
+
+        <button class="occasion-card" data-query="Wedding gift for a couple">
+          <span class="occasion-symbol wedding">♡</span>
+          <span class="occasion-name">Wedding</span>
+          <span class="occasion-subtitle">Celebrate together</span>
+        </button>
+
+        <button class="occasion-card" data-query="Diwali gifts and festive hampers">
+          <span class="occasion-symbol diwali">✺</span>
+          <span class="occasion-name">Diwali</span>
+          <span class="occasion-subtitle">Share the light</span>
+        </button>
+
+        <button class="occasion-card" data-query="Romantic gift for Valentine's Day">
+          <span class="occasion-symbol valentines">♥</span>
+          <span class="occasion-name">Valentine's Day</span>
+          <span class="occasion-subtitle">Say it with love</span>
+        </button>
+
+        <button class="occasion-card" data-query="Housewarming gift for a new home">
+          <span class="occasion-symbol home">⌂</span>
+          <span class="occasion-name">Housewarming</span>
+          <span class="occasion-subtitle">A fresh beginning</span>
+        </button>
+
+        <button class="occasion-card" data-query="Farewell gift for a colleague">
+          <span class="occasion-symbol farewell">↗</span>
+          <span class="occasion-name">Farewell</span>
+          <span class="occasion-subtitle">A lasting memory</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="recommendations" class="recommendation-section section-wrap">
+      <div class="section-heading recommendation-heading">
+        <div>
+          <p class="section-kicker">YOUR NEXT GREAT GIFT</p>
+          <h2>Find something meaningful.</h2>
+          <p id="results-summary" class="results-summary">
+            Tell us the occasion and we'll find a thoughtful match.
+          </p>
+        </div>
+
+        <div class="filter-controls">
+          <label>
+            <span>Category</span>
+            <select id="category-filter">
+              <option value="">All categories</option>
+            </select>
+          </label>
+
+          <label>
+            <span>Maximum price</span>
+            <select id="price-filter">
+              <option value="">Any price</option>
+              <option value="500">Under ₹500</option>
+              <option value="1000">Under ₹1,000</option>
+              <option value="2000">Under ₹2,000</option>
+              <option value="5000">Under ₹5,000</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div id="status-message" class="status-message" role="status" aria-live="polite">
+        <span class="status-symbol">✳</span>
+        <span>Choose an occasion above or search for a gift to begin.</span>
+      </div>
+
+      <div id="product-grid" class="product-grid"></div>
+
+      <div id="empty-state" class="empty-state" hidden>
+        <span>♡</span>
+        <h3>No matching gifts found</h3>
+        <p>Try another search or relax your filters to discover more gifts.</p>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="about-inner">
+        <span class="about-icon">✳</span>
+        <p class="section-kicker">MORE THAN A SEARCH</p>
+        <h2>Meaning behind<br>every recommendation.</h2>
+        <p>
+          Occasio combines language understanding and keyword relevance
+          to connect your occasion with products that make sense.
+          Less endless scrolling. More thoughtful giving.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#">
+      <span class="brand-mark">o.</span>
+      <span>occasio</span>
+    </a>
+    <p>Thoughtful gifts. Meaningful moments.</p>
+    <span>AI-powered product discovery</span>
+  </footer>
+</body>
+</html>
