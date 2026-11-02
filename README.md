@@ -60,6 +60,14 @@ The main objectives of this project are:
 
 The project uses a pre-trained embedding model and does not require a paid AI API.
 
+## UI Screenshots
+
+### 1. Occasion Search Input
+![Occasio occasion search input](screenshots/occasio-ui1.png)
+
+### 2. Product Recommendations
+![Occasio occasion search input](screenshots/occasio-ui2.png)
+
 ## 5. How the Recommendation System Works
 
 The recommendation engine uses a hybrid approach that combines semantic similarity, keyword-based similarity, and occasion-specific relevance.
